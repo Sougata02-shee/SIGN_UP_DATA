@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="username">USER : </label>
+        <input type="text" name="USERNAME" id="username"><br><br>
+
+        <label for="password">PWD : </label>
+        <input type="password" name="PASSWORD" id="password"><br><br>
+
+        <label for="role">ROLE : </label>
+        <input type="text" name="ROLE" id="role"><br><br>
+
+        <label for="email">EMAIL : </label>
+        <input type="email" name="EMAIL" id="email"><br><br>
+
+        <label for="age">AGE : </label>
+        <input type="number" name="Age" id="age"><br><br>
+
+        <button>Submit</button>
+        <button>Cancel</button>
+    </form>
+    <div>
+
+    </div>
+    
+<script>
+    let btn=document.querySelector("button")
+    let div=document.querySelector("div")
+    btn.addEventListener("click",(e)=>{
+        e.preventDefault()
+        let user = document.querySelector("#username").value
+        let pwd = document.querySelector("#password").value
+        let role = document.querySelector("#role").value
+        let mail = document.querySelector("#email").value
+        let age = document.querySelector("#age").value
+        div.innerHTML=` <table border="1">
+        <tr>
+            <td>USER</td>
+            <td>${user}</td>
+        </tr>
+        <tr>
+            <td>PWD</td>
+            <td>${pwd}</td>
+        </tr>
+        <tr>
+            <td>ROLE</td>
+            <td>${role}</td>
+        </tr>
+        <tr>
+            <td>MAIL</td>
+            <td>${mail}</td>
+        </tr>
+        <tr>
+            <td>AGE</td>
+            <td>${age}</td>
+        </tr>
+        
+    </table>`
+    })
+</script>
+    
+</body>
+</html>
